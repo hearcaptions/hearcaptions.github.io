@@ -4,10 +4,163 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HearCaptions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, #dbeafe 0, transparent 32%),
+        radial-gradient(circle at bottom right, #e0e7ff 0, transparent 28%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 760px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.10);
+      padding: 48px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 24px;
+      border-radius: 24px;
+      background: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-fallback {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 64px);
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    .subtitle {
+      margin: 24px auto 0;
+      max-width: 560px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .status {
+      margin-top: 32px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .contact {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 36px 24px;
+        border-radius: 22px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>HearCaptions </h1>
-  <p>App for sound amplification and captions in multiple languages.</p>
-  <p>Contact: hearcaptions@gmail.com</p>
+  <main>
+    <div class="logo">
+      <img src="logo.png" alt="HearCaptions logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=&quot;logo-fallback&quot;>H</span>';">
+    </div>
+
+    <div class="badge">Coming soon</div>
+
+    <h1>HearCaptions</h1>
+
+    <p class="subtitle">
+      Sound amplification and live captions in multiple languages, designed to make everyday listening more accessible.
+    </p>
+
+    <p class="status">
+      The official HearCaptions website is currently under development.
+    </p>
+
+    <p class="contact">
+      Contact: <a href="mailto:hearcaptions@gmail.com">hearcaptions@gmail.com</a>
+    </p>
+  </main>
 </body>
 </html>
